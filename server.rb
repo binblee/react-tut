@@ -14,6 +14,7 @@ server = WEBrick::HTTPServer.new :Port => 3000, :DocumentRoot => root
     if req.request_method == 'POST'
         # Assume it's well formed
         comments << req.query
+        puts "#{comments}"
         File.write('./comments.json', JSON.pretty_generate(comments, :indent => '    '))
     end
 
