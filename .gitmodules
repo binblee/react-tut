@@ -1,0 +1,6 @@
+[submodule "thinking/public/scripts/react"]
+	path = thinking/public/scripts/react
+	url = https://github.com/facebook/react.git
+[submodule "thinking/public/scripts/jquery"]
+	path = thinking/public/scripts/jquery
+	url = https://github.com/jquery/jquery.git
