@@ -1,10 +1,7 @@
 var GroupTitle = React.createClass({
     render: function(){
         return(
-            <div>
-            <p>{this.props.groupname}</p>
-            <hr/>
-            </div>
+            <h3 className="page-header">{this.props.groupname}</h3>
         );
     }
 });
@@ -12,10 +9,15 @@ var GroupTitle = React.createClass({
 var MailSummary = React.createClass({
     render: function(){
         return(
-            <div>
-                <p>From {this.props.mail.from}</p>
-                <p>{this.props.mail.title}</p>
-                <p>{this.props.mail.time}</p>
+            <div className="col-md-4">
+            <div className="panel panel-info">
+                <div className="panel-heading">
+                    <h3 className="panel-title">{this.props.mail.from}&nbsp;<small>{this.props.mail.time}</small></h3>
+                </div>
+                <div className="panel-body">
+                {this.props.mail.title}
+                </div>
+            </div>
             </div>
         );
     }
@@ -24,13 +26,11 @@ var MailList = React.createClass({
     render: function(){
         var mailSummaryNodes = this.props.mails.map(function(mail){
             return(
-                <li><MailSummary mail={mail}/></li>
+                <MailSummary mail={mail}/>
             );
         });
         return(
-            <ul>
-                {mailSummaryNodes}
-            </ul>
+            <div className="row">{mailSummaryNodes}</div>
         );
     }
 });
@@ -73,7 +73,6 @@ var Inbox = React.createClass({
         });
         return(
             <div>
-            <h1>Inbox</h1>
             {mailGroupNodes}
             </div>
         );
