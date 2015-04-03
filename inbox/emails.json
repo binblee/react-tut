@@ -1,5 +1,17 @@
 [
-  {"time": "2015-3-21", "from": "Mark", "title": "Hello from Mark"},
-  {"time": "2015-3-20", "from": "Alice", "title": "Hello from Alice"},
-  {"time": "2015-3-20", "from": "Bob", "title": "Hello from Bob"}
+    {"groupname": "Today",
+    "mails": [
+      {"time": "2015-3-21 12:43:12", "from": "Mark", "title": "Hello from Mark"},
+      {"time": "2015-3-21 13:10:11", "from": "Alice", "title": "Hello from Alice"},
+      {"time": "2015-3-21 16:11:10", "from": "Bob", "title": "Hello from Bob"}
+    ]
+    },
+
+    {"groupname": "Yesterday",
+    "mails": [
+      {"time": "2015-3-20 12:43:12", "from": "Mark", "title": "Hello from Mark Yesterday"},
+      {"time": "2015-3-20 13:10:11", "from": "Alice", "title": "Hello from Alice Yesterday"},
+      {"time": "2015-3-20 16:11:10", "from": "Bob", "title": "Hello from Bob Yesterday"}
+    ]
+    }
 ]
