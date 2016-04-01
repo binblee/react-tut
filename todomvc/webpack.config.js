@@ -1,8 +1,9 @@
 var webpack = require('webpack');
+
 module.exports = {
-  entry:[
+  entry: [
     'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-srver',
+    'webpack/hot/only-dev-server',
     './src/index.jsx'
   ],
   module: {
@@ -10,6 +11,9 @@ module.exports = {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       loader: 'react-hot!babel'
+    }, {
+      test: /\.css$/,
+      loader: 'style!css'
     }]
   },
   resolve: {
@@ -25,6 +29,6 @@ module.exports = {
     hot: true
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin() // Wire in the hot loading plugin
   ]
 };
