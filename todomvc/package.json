@@ -34,6 +34,7 @@
   "dependencies": {
     "immutable": "^3.7.6",
     "react": "^0.14.8",
+    "react-addons-pure-render-mixin": "^0.14.8",
     "react-dom": "^0.14.8",
     "todomvc-app-css": "^2.0.4"
   }

@@ -1,7 +1,12 @@
 import React from 'react';
-import TextInput from './TextInput'
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+import TextInput from './TextInput';
 
 export default class TodoItem extends React.Component {
+  constructor(){
+    super(props);
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+  }
   render(){
     return <li className="todo">
       <div className="view">
