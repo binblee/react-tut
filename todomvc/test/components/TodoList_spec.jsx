@@ -19,5 +19,20 @@ describe('TodoList', ()=>{
     );
     const items = scryRenderedDOMComponentsWithTag(component, 'li');
     expect(items.length).to.equal(2);
+    expect(items[0].textContent).to.contain('React');
+    expect(items[1].textContent).to.contain('Redux');
+  });
+
+  it('renders a list with all items if the filter is "all"', ()=>{
+    const todos = List.of(
+      Map({id: 1, text: 'React', status: 'active'}),
+      Map({id: 2, text: 'Redux', status: 'active'}),
+      Map({id: 3, text: 'Immutable', status: 'completed'})
+    );
+    const component = renderIntoDocument(
+      <TodoList filter="all" todos={todos} />
+    );
+    const items = scryRenderedDOMComponentsWithTag(component, 'li');
+    expect(items.length).to.equal(3);
   });
 });
