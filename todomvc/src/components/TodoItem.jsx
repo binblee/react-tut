@@ -3,7 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 import TextInput from './TextInput';
 
 export default class TodoItem extends React.Component {
-  constructor(){
+  constructor(props){
     super(props);
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }
